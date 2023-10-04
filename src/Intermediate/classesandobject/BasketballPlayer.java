@@ -23,8 +23,10 @@ public class BasketballPlayer {
 
     public void freeThrow(){
         Random randomNumberGenerator = new Random();
-        if(randomNumberGenerator.nextDouble() * 100 > freeThrowPercentage){
-            System.out.println("Failed to score free throw");
+        if((randomNumberGenerator.nextDouble() * 100) > freeThrowPercentage){
+            System.out.println(name + " Failed to score free throw");
+        }else{
+            System.out.println(name + " scored free throw");
         }
     }
 }
