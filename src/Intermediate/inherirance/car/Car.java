@@ -2,7 +2,7 @@ package Intermediate.inherirance.car;
 
 import java.util.Random;
 
-public class Car {
+public abstract class Car {
     private byte numberOfSeats = 5;
     private byte numberOfDoors = 3;
     private byte numberOfVehicleOwners = 1;
@@ -64,5 +64,33 @@ public class Car {
         System.out.println("Number of previous owners: " + numberOfVehicleOwners);
         System.out.println("Number of doors: " + numberOfDoors);
         System.out.println("Number of seats: " + numberOfSeats);
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = Math.abs(price);
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void drive(int mileage){
+
+        this.mileage +=  Math.abs(mileage);
+        System.out.println("int function is called");
+    }
+
+    public void drive(double mileage){
+        int wholeNumberMileage = (int) Math.round(mileage);
+        this.mileage +=  Math.abs(wholeNumberMileage);
+        System.out.println("double function is called");
+    }
+
+    public String getCarName() {
+        return carName;
     }
 }

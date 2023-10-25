@@ -23,4 +23,30 @@ public class BasketballPlayer extends Athlete {
             System.out.println(name + " scored free throw");
         }
     }
+
+    @Override
+    public void getBio() {
+        super.getBio();
+        System.out.println("Free throw percentage: "+ freeThrowPercentage);
+        System.out.println("Points per game: "+ pointsPerGame);
+    }
+
+    @Override
+    public void compete() {
+        super.compete();
+        freeThrow();
+    }
+
+    @Override
+    public String getBodyType() {
+        return "Short and round";
+    }
+
+    public void setFreeThrowPercentage(double freeThrowPercentage) {
+        this.freeThrowPercentage = freeThrowPercentage;
+    }
+
+    public void setPointsPerGame(double pointsPerGame) {
+        this.pointsPerGame = pointsPerGame;
+    }
 }
